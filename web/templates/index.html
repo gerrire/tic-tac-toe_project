@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Крестики-нолики</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+
+<body>
+    <main class="game">
+        <h1>Крестики-нолики</h1>
+
+        <p class="description">
+            Ты играешь за X
+        </p>
+
+        <div class="board" id="board">
+            <button class="cell" data-row="0" data-column="0"></button>
+            <button class="cell" data-row="0" data-column="1"></button>
+            <button class="cell" data-row="0" data-column="2"></button>
+
+            <button class="cell" data-row="1" data-column="0"></button>
+            <button class="cell" data-row="1" data-column="1"></button>
+            <button class="cell" data-row="1" data-column="2"></button>
+
+            <button class="cell" data-row="2" data-column="0"></button>
+            <button class="cell" data-row="2" data-column="1"></button>
+            <button class="cell" data-row="2" data-column="2"></button>
+        </div>
+
+        <p class="status" id="status">
+            Твой ход
+        </p>
+
+        <button class="new-game" id="new-game">
+            Новая игра
+        </button>
+    </main>
+
+    <script
+        src="{{ url_for('static', filename='game.js') }}"
+    ></script>
+</body>
+</html>
